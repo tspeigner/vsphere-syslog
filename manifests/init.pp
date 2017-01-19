@@ -1,4 +1,10 @@
 class vsphere_syslog { 
+
+  package { 'nokogiri':
+    ensure	=> present,
+    provider 	=> gem,
+    name	=> 'nokogiri',
+  }
  
   transport { 'lab':
     username => 'tseadmin@vsphere.local',
@@ -10,7 +16,7 @@ class vsphere_syslog {
   esx_syslog { 'syssett':
     noop	   => true,
     default_rotate => '7',
-    transport => Transport['lab'],
+    transport      => Transport['lab'],
   }
 
 } 
