@@ -2,7 +2,7 @@ class vsphere_syslog {
  
   transport { 'lab':
     username => 'tseadmin@vsphere.local',
-    password => 'puppetlabs',
+    password => 'Puppet4Life!',
     server   => 'tse-vc1-prod.corp.puppetlabs.net',
     options  => { 'insecure' => true },
   }
