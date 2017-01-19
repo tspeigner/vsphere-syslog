@@ -2,7 +2,7 @@ class vsphere_syslog {
 
   package { 'nokogiri':
     ensure   => present,
-    provider => gem,
+    provider => pe_gem,
     name     => 'nokogiri',
   }
  
