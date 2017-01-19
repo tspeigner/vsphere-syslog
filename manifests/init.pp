@@ -1,5 +1,7 @@
 class vsphere_syslog { 
 
+include vcenter::package
+
   package { 'nokogiri':
     ensure   => present,
     provider => pe_gem,
