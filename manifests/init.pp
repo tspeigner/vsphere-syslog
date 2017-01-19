@@ -1,9 +1,9 @@
 class vsphere_syslog { 
 
   package { 'nokogiri':
-    ensure	=> present,
-    provider 	=> gem,
-    name	=> 'nokogiri',
+    ensure   => present,
+    provider => gem,
+    name     => 'nokogiri',
   }
  
   transport { 'lab':
@@ -14,7 +14,7 @@ class vsphere_syslog {
   }
 
   esx_syslog { 'syssett':
-    noop	   => true,
+    noop           => true,
     default_rotate => '7',
     transport      => Transport['lab'],
   }
